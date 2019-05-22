@@ -6,6 +6,10 @@ import wget
 initialize = True
 net = None
 dest_dir = os.path.expanduser('~') + os.path.sep + '.cvlib' + os.path.sep + 'object_detection' + os.path.sep + 'yolo' + os.path.sep + 'yolov3'
+
+if not os.path.exists(dest_dir):
+    os.makedirs(dest_dir)
+
 classes = None
 COLORS = np.random.uniform(0, 255, size=(80, 3))
 
